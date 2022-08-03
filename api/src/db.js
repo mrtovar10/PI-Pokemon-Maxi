@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { Sequelize } = require('sequelize');
+const { Sequelize, DataTypes } = require('sequelize'); // No olvidar el DataTypes
 const fs = require('fs');
 const path = require('path');
 const {
@@ -10,7 +10,7 @@ const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
 });
-const basename = path.basename(__filename);
+const basename = path.basename(__filename); // const basename = 'db.js'
 
 const modelDefiners = [];
 
@@ -30,10 +30,21 @@ sequelize.models = Object.fromEntries(capsEntries);
 
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-const { Pokemon } = sequelize.models;
+const { Pokemon, Tipo } = sequelize.models;
+
+// Product.hasMany(Reviews);
+
+// Mis funciones validadoras
+function esPositivo(value) {
+  if (parseInt(value,10) < 0) {
+    throw new Error('Only positive values are allowed!');
+  }
+}
 
 // Aca vendrian las relaciones
-// Product.hasMany(Reviews);
+//Estoy haciendo una relacion de muchos a muchos con las siguientes 2 lineas de abajo
+Tipo.belongsToMany(Pokemon, {through:'Pokemon_types'})
+Pokemon.belongsToMany(Tipo, {through:'Pokemon_types'})
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
