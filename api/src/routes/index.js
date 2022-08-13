@@ -70,7 +70,7 @@ router.get('/types', (req, res)=>{
 router.post('/pokemons', async (req, res) => {
     //"Tipos" lo haremos desde el front, será un arreglo de numeros ejemplo [1,2,5]
     // Para poder crear la tabla intermedia que relaciona Tipo con Pokemon
-    let {Nombre,Vida,Ataque,Defensa,Velocidad, Altura,Peso,Tipos}
+    let {Nombre,imgUrl,Vida,Ataque,Defensa,Velocidad, Altura,Peso,Tipos}
     = req.body;
 
     try {
@@ -80,7 +80,7 @@ router.post('/pokemons', async (req, res) => {
 
        //Insertamos nuestro pokemon creado en la db
      let newPokemon = await Pokemon.create({
-         Nombre, Vida, Ataque, Defensa, Velocidad, Altura, Peso
+         Nombre, Vida, imgUrl, Ataque, Defensa, Velocidad, Altura, Peso
         })
         newPokemon.setTipos(Tipos)
         res.send(newPokemon)
@@ -95,7 +95,7 @@ router.get('/pokemons/:id', (req, res) =>{
 
     funciones.detallesPokemon(id).then(
         datos => {
-            console.log('resolucion de funcion',datos)
+            // console.log('resolucion de funcion',datos)
             res.send(datos)}
     ).catch(
         datos => res.status(400).send({error:datos.message})

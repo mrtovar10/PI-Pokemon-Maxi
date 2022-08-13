@@ -12,6 +12,10 @@ module.exports = (sequelize) => {
       allowNull:false,
       primaryKey: true
     },
+    imgUrl:{
+      type:DataTypes.STRING,
+      defaultValue:null
+    },
     Nombre:{
       type:DataTypes.STRING,
       allowNull:false
@@ -19,26 +23,32 @@ module.exports = (sequelize) => {
     Vida:{
       type:DataTypes.INTEGER,
       positivo(value) {esPositivo(value)},
+      defaultValue:0
     },
     Ataque:{
       type:DataTypes.INTEGER,
-      positivo(value) {esPositivo(value)}
+      positivo(value) {esPositivo(value)},
+      defaultValue:0
     },
     Defensa:{
       type:DataTypes.INTEGER,
-      positivo(value) {esPositivo(value)}
+      positivo(value) {esPositivo(value)},
+      defaultValue:0
     },
     Velocidad:{
       type:DataTypes.INTEGER,
-      positivo(value) {esPositivo(value)}
+      positivo(value) {esPositivo(value)},
+      defaultValue:0
     },
     Altura:{
       type:DataTypes.INTEGER,
-      positivo(value) {esPositivo(value)}
+      positivo(value) {esPositivo(value)},
+      defaultValue:0
     },
     Peso:{
       type:DataTypes.INTEGER,
-      positivo(value) {esPositivo(value)}
+      positivo(value) {esPositivo(value)},
+      defaultValue:0
     },
     // Para diferenciar entre pokemons creados por usuario y los pokemons de la api...
     // esta columna basicamente es para saber si el pokemon fue creado por un usuario o no

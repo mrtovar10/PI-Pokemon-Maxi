@@ -1,0 +1,55 @@
+.div__boton {
+    background: #FBCA1F;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 13px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    margin: 0.5em;
+}
+    .div__boton:hover {
+        transform: translate(-0.05em, -0.05em);
+        box-shadow: 0.15em 0.15em;
+    }
+    .div__boton:active {
+        transform: translate(0.05em, 0.05em);
+        box-shadow: 0.05em 0.05em;
+    }
+
+.divUno {
+    background-color: rgb(60, 183, 136);
+    margin: 0;
+    padding: 0.7rem;
+    /* width: 100vw;
+    height: 100vh; */
+}
+
+.divDos {
+    margin: 0;
+    padding: 0.7rem;
+    /* width: 100vw;
+    height: 100vh; */
+}
+
+.div__sort {
+    background: #FBCA1F;
+    font-family: inherit;
+    padding: 0.3em 1.3em;
+    font-weight: 900;
+    font-size: 13px;
+    border: 3px solid black;
+    border-radius: 1.2em;
+    box-shadow: 0.1em 0.1em;
+    margin: 0.5em;
+}
+
+.div__pokes {
+    display: flex;
+    /* background-color: bisque; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em;
+    align-content: stretch;
+}

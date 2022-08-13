@@ -1,5 +1,5 @@
 import React from "react";
-
+import s from './paginado.module.css'
 
 export default function Paginado ({pokePorPag, nPokemons, irAPagina}) {
     let arreglo = []; // arreglo que me va a guardar los numeritos del paginado
@@ -10,14 +10,14 @@ export default function Paginado ({pokePorPag, nPokemons, irAPagina}) {
     for (let i = 1; i <= Math.ceil(nPokemons / pokePorPag); i++) {
         arreglo.push(i)
     }
-
+    
     return (
         <nav>
-            <ul className="paginado">
+            <ul className={s.paginado}>
                 {arreglo?.map(numero => {
                     return (
-                    <li className="number" key={numero}>
-                        <h5 onClick={()=>irAPagina(numero)}>{numero}</h5>
+                    <li onClick={()=>irAPagina(numero)} className={s.number} key={numero}>
+                        <h5>{numero}</h5>
                     </li>
                     )
                 })}

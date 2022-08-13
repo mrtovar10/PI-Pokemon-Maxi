@@ -1,0 +1,298 @@
+
+.div__boton {
+    background: #FBCA1F;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 13px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    margin: 0.5em;
+}
+    .div__boton:hover {
+        transform: translate(-0.05em, -0.05em);
+        box-shadow: 0.15em 0.15em;
+    }
+    .div__boton:active {
+        transform: translate(0.05em, 0.05em);
+        box-shadow: 0.05em 0.05em;
+    }
+
+.divo {
+    border: 3px solid black;
+    border-radius: 2em;
+    background: #FBCA1F;
+    margin: 0.5em;
+    width: 25em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.normal {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(168, 168, 120);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.fighting {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(206, 46, 18);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.flying {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(168, 144, 240);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.poison {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(143, 63, 216);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.ground {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(179, 147, 22);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.rock {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(120, 101, 16);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.bug {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(145, 172, 26);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.ghost {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(65, 11, 116);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.steel {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(116, 113, 114);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.fire {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(209, 90, 11);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.water {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(21, 140, 205);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.grass {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(27, 172, 56);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.electric {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(212, 222, 18);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.psychic {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(220, 31, 179);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.ice {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(129, 181, 203);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.dragon {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(124, 84, 120);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.dark {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(35, 33, 36);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.fairy {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(253, 153, 247);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.unknown {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(74, 86, 108);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}
+
+.shadow {
+    display: flex;
+    color:white;
+    /* margin: 0.5em; */
+    /* border: 2px solid black; */
+    background-color: rgb(0, 0, 0);
+    border-radius: 0.3em;
+    padding: 2px;
+    margin: 0.4em;
+    width: 5em;
+    justify-content: center;
+}

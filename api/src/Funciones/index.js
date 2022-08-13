@@ -77,7 +77,8 @@ module.exports = {
                 ID:valor.id,
                 Nombre: valor.forms[0].name,
                 Tipos: newTypes,
-                imgUrl: valor.sprites.other.dream_world.front_default
+                imgUrl: valor.sprites.other.dream_world.front_default,
+                Ataque: valor.stats[1].base_stat
               }
             })
             // console.log(arrayFinal)
@@ -95,7 +96,7 @@ module.exports = {
     // Si los tipos ya estan guardados en la db entonces los retorna
 
     //Consulta la tabla y en caso de que hayan datos los retorna
-    // Para comprobar q trade de la API o de la db puedes usar [['Nombre','NombreDB']]
+    // Para comprobar q trae de la API o de la db puedes usar [['Nombre','NombreDB']]
     let types = await Tipo.findAll({attributes:['Nombre']});
     if (types.length) return types
 
@@ -118,7 +119,7 @@ module.exports = {
 
   pokemonsCreados: async function (){
     //Consulta la base de datos y trae los pokemons creados
-    // Limpia el arreglo y retorna Promesa de un arreglo de objetos de la forma:
+    // Limpia el arreglo de tipos y retorna Promesa de un arreglo de objetos de la forma:
     // [{name:..., ID:..., Tipos:[tipo1,tipo2...]}, {name..}, {name...}]
 
     try {
@@ -131,7 +132,7 @@ module.exports = {
             through:{ attributes: []}
           }
         ],
-        attributes:['Nombre','ID']
+        attributes:['ID','Nombre','imgUrl','CreadoPorUsuario','Ataque']
       })
       let datosSucios =  pokeDB.map(value => value.toJSON())
   
@@ -140,7 +141,7 @@ module.exports = {
         let newTipos = value.Tipos.map(objeto => objeto.name)
   
         //Sustituyo el array de Tipos 'sucio' por el limpio (newTipos)
-        return {...value,Tipos:newTipos, imgUrl:null}
+        return {...value,Tipos:newTipos}
       })
       return datosLimpios;
     } catch (e) {
@@ -189,7 +190,7 @@ module.exports = {
           // console.log('pokee',pokemon[0].toJSON())
           let pokeToClean = pokemon[0].toJSON()
           let newTipos = pokeToClean.Tipos.map(objeto => objeto.name)
-          return {...pokeToClean,Tipos:newTipos,imgURL:null}
+          return {...pokeToClean,Tipos:newTipos}
         }
         throw new Error('No existe pokemon con ese ID')
       } catch (e) {

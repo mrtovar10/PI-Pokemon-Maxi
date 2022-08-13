@@ -1,0 +1,43 @@
+
+/* * {
+    padding: 0px;
+    margin: 0px;
+    font-family: inherit;
+} */
+
+.div {
+    /* background-color: rgb(214, 130, 212); */
+    margin: 0px;
+    padding: 0px;
+    /* width: 100vw;
+    height: 100vh; */
+}
+
+.div__boton {
+    background: #FBCA1F;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+    margin: 3em;
+}
+    .div__boton:hover {
+        transform: translate(-0.05em, -0.05em);
+        box-shadow: 0.15em 0.15em;
+    }
+    .div__boton:active {
+        transform: translate(0.05em, 0.05em);
+        box-shadow: 0.05em 0.05em;
+    }
+
+.div__h1 {
+    font-size: 4rem;
+    padding-top: 2rem;
+}
+
+/* .div__ff {
+    background-image: url('../../Images/Arepa1.jpg');
+} */
