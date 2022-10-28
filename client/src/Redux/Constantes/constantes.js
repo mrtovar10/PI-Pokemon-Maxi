@@ -16,3 +16,4 @@ export const SEARCH_POKEMON_FRONT = 'SEARCH_POKEMON_FRONT'
 
 // constantes para detalles
 export const POKEMON_DETAILS = 'POKEMON_DETAILS'
+export const BORRAR_DETALLES = 'BORRAR_DETALLES'

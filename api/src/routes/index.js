@@ -108,3 +108,4 @@ router.get('/pokemons/:id', (req, res) =>{
 //     res.send('Listo')
 // })
 module.exports = router;
+

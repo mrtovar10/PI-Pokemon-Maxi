@@ -17,10 +17,10 @@ module.exports = {
 
     // A continuacion mi codigo:
     // Segunda Pagina (mi condicion de parada) otros 20 pokemons
-    if (segundaPagina) return fetch(endPointPrincipal).then(result => result.json())
+    if (segundaPagina) return fetch(endPointPrincipal).then(resp => resp.json())
 
     else{ // Primera pagina (primeros 20 pokemons)
-      return fetch(endPointPrincipal).then(result => result.json())
+      return fetch(endPointPrincipal).then(resp => resp.json())
       .then(datos => {
         return this.PromesaInfoApi(datos.next,true).then(
           datos2 => {

@@ -1,6 +1,7 @@
 import {DISPLAY_POKEMONS, FILTER_BY_CREATOR, 
         FILTER_BY_TIPO,SORT_BY_ATTACK,SORT_BY_NAME,
-        RESET_FILTERS,POST_POKEMON, SEARCH_POKEMON, SEARCH_POKEMON_FRONT, POKEMON_DETAILS
+        RESET_FILTERS,POST_POKEMON, SEARCH_POKEMON, SEARCH_POKEMON_FRONT, POKEMON_DETAILS,
+        BORRAR_DETALLES
     } from '../Constantes/constantes.js'
 
 
@@ -118,10 +119,15 @@ const reducer = function (state = initialState, action) {
           allPokemons: searchT
         }
 
-			case POKEMON_DETAILS:
-				return {
-					...state, detalles:action.payload
-				}
+        case POKEMON_DETAILS:
+            return {
+                ...state, detalles:action.payload
+            }
+
+        case BORRAR_DETALLES:
+            return {
+                ...state, detalles:{}
+            }
 				
       default:
 

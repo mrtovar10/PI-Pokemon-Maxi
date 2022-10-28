@@ -2,7 +2,7 @@ import React from 'react';
 import {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {getPokemons, filterByCreator, 
-        filterByTipo, sortByName,sortByAttack, resetFilters
+        filterByTipo, sortByName,sortByAttack, resetFilters, borrarDetalles
     } from '../../Redux/Actions/index.js'
 import {Link} from 'react-router-dom'
 import Pokemon from '../Pokemon/pokemon.js'
@@ -45,6 +45,7 @@ export default function Home () {
     //Component did mount
     useEffect (()=>{
         if(!allPokemons.length) dispatch(getPokemons())
+        dispatch(borrarDetalles())
     },[])
 
     function handleReset(evento) {
