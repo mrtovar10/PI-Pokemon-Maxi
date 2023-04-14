@@ -8,6 +8,23 @@ import {DISPLAY_POKEMONS,
 import axios from 'axios'
 import baseURL from '../../index'
 
+export function searchPokemon(texto){
+    return function(dispatch) {
+        return fetch(`${baseURL}/pokemons?name=${texto}`)
+        .then(data => data.json())
+        .then(respuesta => dispatch({type: SEARCH_POKEMON, payload:respuesta}))
+    }
+}
+
+export function postPokemon(objetoPokemon) {
+    return async function (dispatch) {
+        return axios.post('/pokemons',objetoPokemon)
+        .then(
+            respuesta => dispatch({type:POST_POKEMON, payload:respuesta})
+        )
+    }
+}
+
 // Creamos el Action creator para primerosPokemons el cual me trae el arreglo de
 // mis 40 pokemons de la API + los de mi DB
 export function getPokemons () {
@@ -21,22 +38,7 @@ export function getPokemons () {
     }
 }
         
-export function postPokemon(objetoPokemon) {
-    return async function (dispatch) {
-        return axios.post('/pokemons',objetoPokemon)
-        .then(
-            respuesta => dispatch({type:POST_POKEMON, payload:respuesta})
-        )
-    }
-}
 
-export function searchPokemon(texto){
-    return function(dispatch) {
-        return fetch(`${baseURL}/pokemons?name=${texto}`)
-        .then(data => data.json())
-        .then(respuesta => dispatch({type: SEARCH_POKEMON, payload:respuesta}))
-    }
-}
 
 export function searchPokemonFront(texto) {
     return {type:SEARCH_POKEMON_FRONT, 
